@@ -39,8 +39,14 @@ class SHA256{
                 paddedLength = temp;
         }
 
-        int binToDec(string l) {
+        string hexToBin(string l) {        // hex to 32 bit-binary
+                if (l.size() >= 3) if (l[0] == '0' and l[1] == 'x') l = l.substr(2,l.size() - 2);
+                if (l.size() == 1 and l[0] == 0) return "00000000000000000000000000000000";
 
+                string output = "";
+                for (int i = 0; i < l.size(); i++) {
+                        char temp = l[size
+                }
         }
 
         string rightRotate(string l, int n) {
